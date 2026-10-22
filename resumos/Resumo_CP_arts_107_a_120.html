@@ -72,6 +72,8 @@
   .mi small{ font-weight:500; color:#5b21b6; letter-spacing:0; }
   .ini{ background:#6ee77a; color:#14532d; font-weight:800; border-radius:2px; padding:0 .5px; }
   .ini[data-n]::after{ content:attr(data-n); font-size:6pt; font-weight:700; vertical-align:super; line-height:0; margin-left:.5px; color:#166534; }
+  .vin{ display:block; font-size:9.2pt; color:#4c1d95; background:var(--purple-bg); border:1.5px dashed #a78bfa; border-radius:5px; padding:4px 9px; margin:5px 0; break-inside:avoid; }
+  .vin > b:first-child{ color:var(--purple); text-transform:uppercase; font-size:8.2pt; letter-spacing:.04em; margin-right:4px; }
   .two{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
   .two > .box{ margin:0; }
   ol.q{ padding-left:28px; margin:4px 0; }
@@ -94,6 +96,7 @@
   <span style="border-color:var(--orange);background:var(--orange-bg)">Laranja · atenção para a prova</span>
   <span style="border-color:var(--red);background:var(--red-bg)">Vermelho · exceções/pontos críticos</span>
   <span style="border-color:var(--purple);background:var(--purple-bg)">Roxo · mnemônico de iniciais, junto ao dispositivo (recurso didático, não é texto legal)</span>
+  <span style="border-color:#a78bfa;background:var(--purple-bg);border-left-style:dashed">Roxo tracejado · vínculo de memorização (relação lógica/numérica entre dispositivos)</span>
   <span style="border-color:#22c55e;background:#dcfce7">Verde marca-texto · letra do mnemônico, grifada no texto do dispositivo</span>
   <span class="tag" style="margin:0">OJ 2023</span> <span class="tag" style="margin:0">OJ 2024</span> <span style="border:0;padding:0">= cobrado em prova de Oficial de Justiça, conforme marcação do material-fonte</span>
 </div>
@@ -152,6 +155,11 @@ Antes de transitar em julgado a sentença final, a prescrição regula-se pelo <
   <div><i>8 anos</i>&gt; 2 até 4</div>
   <div><i>4 anos</i>1 até 2</div>
   <div><i>3 anos</i>&lt; 1</div>
+</div>
+<div class="vin"><b>Vínculo</b>
+<b>Prazos</b> (de baixo para cima): <span class="num">3</span>, <span class="num">4</span> e daí <b>soma 4</b>: 4 → 8 → 12 → 16 → 20.<br>
+<b>Penas</b> (de cima para baixo): <b>tira 4</b>: 12 → 8 → 4; depois <b>metade</b>: 4 → 2 → 1 <span style="color:#6b7280">(o “tira 4” quebra abaixo de 4)</span>.<br>
+<b>Atalho</b> nos incs. II a IV: prazo = <b>teto da pena + 4</b> (12+4 = 16 · 8+4 = 12 · 4+4 = 8). Não vale para I (sem teto), V e VI.
 </div>
 <div class="box att"><b class="lbl">Atenção para a prova</b>
 • Base = <b>máximo</b> da pena <b>cominada</b> (abstrata), não a mínima nem a aplicada.<br>
@@ -235,6 +243,7 @@ A prescrição da pena de multa ocorrerá:
   <li><span class="id">I</span> Em <span class="num">2 anos</span>, quando a multa for a <b>única</b> cominada ou aplicada.</li>
   <li><span class="id">II</span> No <b>mesmo prazo da pena privativa de liberdade</b>, quando a multa for <b>alternativa ou cumulativamente cominada</b> ou <b>cumulativamente aplicada</b>.</li>
 </ul>
+<div class="vin"><b>Vínculo</b> Multa sozinha prescreve <b>abaixo do piso</b> da tabela do art. 109: <span class="num">2</span> &lt; 3 (menor prazo da prisão). Multa acompanhada de prisão “pega carona” no prazo da prisão.</div>
 <div class="box att"><b class="lbl">Atenção para a prova</b>
 • Multa <b>isolada</b> = <b>2 anos</b> (não 3, que é o prazo do art. 109, VI).<br>
 • Multa <b>junto</b> com prisão (alternativa/cumulativa) = segue o prazo da <b>privativa de liberdade</b>.
@@ -250,6 +259,8 @@ Prazos de prescrição <b class="r">reduzidos de metade</b> quando o criminoso e
   <li><span class="id">1</span> <b>menor de <span class="num">21 anos</span></b> — <b>ao tempo do crime</b>; ou</li>
   <li><span class="id">2</span> <b>maior de <span class="num">70 anos</span></b> — <b>na data da sentença</b>.</li>
 </ul>
+<div class="vin"><b>Vínculo</b> Idade na ordem da história: <b>jovem no começo</b> (menor de 21 → <b>no crime</b>) · <b>idoso no fim</b> (maior de 70 → <b>na sentença</b>).<br>
+Espelho com o art. 110: reincidente <b>aumenta 1/3</b> · idade <b>reduz metade</b>.</div>
 <div class="box exc"><b class="lbl">Exceção</b>
 <b>Não</b> se reduz se o crime envolver <b>violência sexual contra a mulher</b>.
 </div>
@@ -293,6 +304,7 @@ O curso da prescrição <b class="r">interrompe-se</b>: <span class="mi">R.P.C +
   <li><span class="id">§ 2º</span> Interrompida a prescrição, <b class="o">salvo a hipótese do inc. V</b>, <b>todo o prazo</b> começa a correr <b>novamente, do dia da interrupção</b>.</li>
 </ul>
 </div>
+<div class="vin"><b>Vínculo</b> As exceções andam de trás para frente: § 1º tira os <b>dois últimos</b> incisos (<b>V e VI</b>); § 2º tira só o <b>penúltimo</b> (<b>V</b>). No mnemônico, são o “C.R” final do espelho R.P.C + P.<b>C.R</b>.</div>
 <div class="box exc"><b class="lbl">Exceções que caem</b>
 • <b>§ 1º</b>: V (cumprimento da pena) e VI (reincidência) <b>não se comunicam</b> aos demais autores.<br>
 • <b>§ 2º</b>: só o inc. V não faz o prazo recomeçar do zero no dia da interrupção.
