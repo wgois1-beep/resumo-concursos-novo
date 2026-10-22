@@ -93,6 +93,27 @@
   .qc .qd td.c{ white-space:normal; width:42%; }
   .ante{ color:var(--red); font-weight:700; }
   .depo{ color:#2563eb; font-weight:700; }
+  .lado{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); break-inside:avoid; margin-top:6px; }
+  .lado > .col{ padding:4px 10px 6px; }
+  .lado > .col:first-child{ border-right:4px solid #a855f7; padding-left:0; }
+  .lado > .col:last-child{ padding-right:0; }
+  .lh{ text-align:center; color:#fff; border-radius:6px; padding:6px 6px 5px; font-size:14pt; font-weight:800; line-height:1.15; }
+  .lh small{ display:block; font-size:8.8pt; font-weight:500; margin-top:2px; }
+  .lh.l{ background:var(--red); } .lh.r{ background:#2563eb; }
+  .mword{ text-align:center; font-size:24pt; font-weight:900; letter-spacing:.18em; color:var(--purple); margin:6px 0 2px; line-height:1.1; }
+  .mword small{ display:block; font-size:8pt; font-weight:600; letter-spacing:0; color:#5b21b6; }
+  .mstrip{ display:grid; gap:4px; margin:4px 0 8px; }
+  .mstrip > div{ border:2px solid var(--purple); background:var(--purple-bg); border-radius:6px; text-align:center; padding:4px 2px 5px; }
+  .mstrip > div.gap{ margin-left:8px; }
+  .mstrip b{ display:block; font-size:24pt; line-height:1; color:var(--purple); font-weight:900; }
+  .mstrip u{ display:block; text-decoration:none; font-size:7.4pt; color:var(--blue); font-weight:800; margin-top:2px; }
+  .mstrip > div{ min-width:0; }
+  .mstrip.six b{ font-size:20pt; }
+  .mstrip.six i, .mstrip.six u{ font-size:6.6pt; }
+  .mstrip i{ display:block; font-style:normal; font-size:7.4pt; color:#374151; line-height:1.2; }
+  .lado ul.disp li{ font-size:9.2pt; }
+  .lado .box{ font-size:9.2pt; }
+  table.compacta{ font-size:8.6pt; } table.compacta td{ padding:2px 7px; } table.compacta .num{ font-size:9.6pt; }
   .two{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
   .two > .box{ margin:0; }
   ol.q{ padding-left:28px; margin:4px 0; }
@@ -410,6 +431,66 @@ O curso da prescrição <b class="r">interrompe-se</b>: <span class="mi">R.P.C +
   <div class="st x"><b>VI · Reincidência</b></div>
 </div>
 
+<!-- ============ PÁGINA LADO A LADO: ART. 116 × ART. 117 ============ -->
+<div class="pb avoid" style="break-after:page">
+<h2>Lado a lado — Art. 116 (impeditivas) × Art. 117 (interruptivas)</h2>
+<div class="lado">
+  <div class="col">
+    <div class="lh l">Art. 116 · IMPEDITIVAS<small>a prescrição <b>NÃO CORRE</b> — antes de passar em julgado a sentença final</small></div>
+    <div class="mword">P.E.R.A<small>na ordem da lei · 4 incisos</small></div>
+    <div class="mstrip" style="grid-template-columns:repeat(4,1fr)">
+      <div><b>P</b><u>I</u><i>outro processo</i></div>
+      <div><b>E</b><u>II</u><i>pena no exterior</i></div>
+      <div><b>R</b><u>III</u><i>recursos inadmissíveis</i></div>
+      <div><b>A</b><u>IV</u><i>acordo (ANPP)</i></div>
+    </div>
+    <ul class="disp">
+      <li><span class="id">I</span> Questão, em outro <b><span class="ini">p</span>rocesso</b>, de que dependa o <b>reconhecimento da existência do crime</b>, enquanto não resolvida.</li>
+      <li><span class="id">II</span> Agente cumprindo <b>pena no <span class="ini">e</span>xterior</b>.</li>
+      <li><span class="id">III</span> Pendência de <b>embargos de declaração</b> ou de <b><span class="ini">r</span>ecursos aos Tribunais Superiores</b>, <b class="r">quando inadmissíveis</b>.</li>
+      <li><span class="id">IV</span> <b><span class="ini">A</span>cordo de não persecução penal</b> <b>não cumprido ou não rescindido</b>.</li>
+    </ul>
+    <div class="box att"><b class="lbl">Parágrafo único — depois do trânsito</b>
+    Passada em julgado a <b>sentença condenatória</b>, a prescrição não corre enquanto o condenado está <b>preso por outro motivo</b>.</div>
+    <div class="box regra"><b class="lbl">Efeito</b>
+    A prescrição <b>não corre</b> enquanto durar a causa.</div>
+    <div class="vin"><b>Vínculo</b> P.E.R.A → a prescrição <b>es-PERA</b>: fica parada enquanto a causa durar.</div>
+  </div>
+  <div class="col">
+    <div class="lh r">Art. 117 · INTERRUPTIVAS<small>o curso da prescrição <b>INTERROMPE-SE</b></small></div>
+    <div class="mword">R.P.C + P.C.R<small>na ordem da lei · 6 incisos · espelho</small></div>
+    <div class="mstrip six" style="grid-template-columns:repeat(6,minmax(0,1fr))">
+      <div><b>R</b><u>I</u><i>recebe denúncia</i></div>
+      <div><b>P</b><u>II</u><i>pronúncia</i></div>
+      <div><b>C</b><u>III</u><i>confirma pronúncia</i></div>
+      <div class="gap"><b>P</b><u>IV</u><i>publica sentença</i></div>
+      <div><b>C</b><u>V</u><i>cumpre pena</i></div>
+      <div><b>R</b><u>VI</u><i>reincide</i></div>
+    </div>
+    <ul class="disp">
+      <li><span class="id">I</span> <b><span class="ini">R</span>ecebimento</b> da denúncia ou da queixa.</li>
+      <li><span class="id">II</span> <b><span class="ini">P</span>ronúncia</b>.</li>
+      <li><span class="id">III</span> Decisão <b><span class="ini">c</span>onfirmatória da pronúncia</b>.</li>
+      <li><span class="id">IV</span> <b><span class="ini">P</span>ublicação</b> da sentença ou acórdão <b>condenatórios recorríveis</b>.</li>
+      <li><span class="id">V</span> Início ou continuação do <b><span class="ini">c</span>umprimento da pena</b>.</li>
+      <li><span class="id">VI</span> <b><span class="ini">R</span>eincidência</b>.</li>
+    </ul>
+    <div class="box exc"><b class="lbl">§ 1º — Comunicação</b>
+    Efeito para <b>todos os autores</b>, <b class="r">exceto V e VI</b>. Crimes conexos no <b>mesmo processo</b>: a interrupção de um <b>estende-se aos demais</b>.</div>
+    <div class="box regra"><b class="lbl">§ 2º — Efeito</b>
+    <b>Todo o prazo</b> recomeça <b>do dia da interrupção</b>, <b class="r">salvo inc. V</b>.</div>
+    <div class="vin"><b>Vínculo</b> Exceções no <b>fim do espelho</b>: § 1º tira <b>C.R</b> (V e VI); § 2º tira só o <b>C</b> (V).</div>
+  </div>
+</div>
+<table style="margin-top:8px">
+  <tr><th style="width:20%"></th><th>Art. 116 — impede (não corre)</th><th>Art. 117 — interrompe</th></tr>
+  <tr><td><b>Verbo da lei</b></td><td>“a prescrição <b>não corre</b>”</td><td>“o curso da prescrição <b>interrompe-se</b>”</td></tr>
+  <tr><td><b>Efeito</b></td><td>Prazo parado enquanto dura a causa</td><td><b>Todo o prazo</b> recomeça do dia da interrupção (salvo V)</td></tr>
+  <tr><td><b>Momento</b></td><td>Caput: <b>antes</b> do trânsito · P.U.: <b>depois</b> (preso por outro motivo)</td><td>Ao longo do processo (I a IV) e da execução (V e VI)</td></tr>
+  <tr><td><b>Mnemônico</b></td><td><span class="mi">P.E.R.A</span> → es-PERA</td><td><span class="mi">R.P.C + P.C.R</span> → espelho</td></tr>
+</table>
+</div>
+
 <!-- ============ ARTS. 118 A 120 ============ -->
 <div class="avoid">
 <h2>Arts. 118 a 120 — Penas mais leves, concurso de crimes e perdão judicial</h2>
@@ -424,10 +505,18 @@ O curso da prescrição <b class="r">interrompe-se</b>: <span class="mi">R.P.C +
 • Perdão judicial: <b>não gera reincidência</b>.
 </div>
 
+<h3 style="break-after:avoid">Perdão do ofendido × perdão judicial</h3>
+<table>
+  <tr><th style="width:22%"></th><th>Perdão do ofendido (art. 107, V)</th><th>Perdão judicial (arts. 107, IX, e 120)</th></tr>
+  <tr><td><b>Quem concede</b></td><td>O ofendido</td><td>O juiz</td></tr>
+  <tr><td><b>Requisito</b></td><td>Precisa ser <b>aceito</b>; só em <b>ação privada</b></td><td>Só nos <b>casos previstos em lei</b></td></tr>
+  <tr><td><b>Reincidência</b></td><td>—</td><td>A sentença <b>não</b> é considerada para reincidência (art. 120)</td></tr>
+</table>
+
 <!-- ============ QUADROS DE REVISÃO ============ -->
 <h2>Quadros de revisão</h2>
 <h3>Todos os números do material</h3>
-<table>
+<table class="compacta">
   <tr><th style="width:110px">Número</th><th>O que é</th><th style="width:120px">Dispositivo</th></tr>
   <tr><td class="num">20 anos</td><td>Prescrição se pena máxima &gt; 12 anos</td><td>Art. 109, I</td></tr>
   <tr><td class="num">16 anos</td><td>Pena máxima &gt; 8 e ≤ 12</td><td>Art. 109, II</td></tr>
@@ -449,19 +538,6 @@ O curso da prescrição <b class="r">interrompe-se</b>: <span class="mi">R.P.C +
 • <b>18</b> (vítima, art. 111, V) × <b>21</b> (agente, ao tempo do crime) × <b>70</b> (agente, na sentença) — art. 115.
 </div>
 
-<h3 style="break-after:avoid">Comparativos</h3>
-<table>
-  <tr><th style="width:22%"></th><th>Impeditivas / suspensivas (art. 116)</th><th>Interruptivas (art. 117)</th></tr>
-  <tr><td><b>Efeito</b></td><td>A prescrição <b>não corre</b> enquanto dura a causa</td><td>Prazo <b>recomeça do zero</b> no dia da interrupção (§ 2º, salvo inc. V)</td></tr>
-  <tr><td><b>Hipóteses</b></td><td>Questão prejudicial em outro processo · pena no exterior · ED/recursos inadmissíveis · ANPP · preso por outro motivo (após o trânsito)</td><td>Recebimento da denúncia/queixa · pronúncia · confirmação da pronúncia · publicação de condenação recorrível · início/continuação do cumprimento · reincidência</td></tr>
-  <tr><td><b>Mnemônico</b></td><td><span class="mi">P.E.R.A</span></td><td><span class="mi">R.P.C + P.C.R</span></td></tr>
-</table>
-<table>
-  <tr><th style="width:22%"></th><th>Perdão do ofendido (art. 107, V)</th><th>Perdão judicial (arts. 107, IX, e 120)</th></tr>
-  <tr><td><b>Quem concede</b></td><td>O ofendido</td><td>O juiz</td></tr>
-  <tr><td><b>Requisito</b></td><td>Precisa ser <b>aceito</b>; só em <b>ação privada</b></td><td>Só nos <b>casos previstos em lei</b></td></tr>
-  <tr><td><b>Reincidência</b></td><td>—</td><td>A sentença <b>não</b> é considerada para reincidência (art. 120)</td></tr>
-</table>
 
 <!-- ============ QUESTÕES ============ -->
 <h2 class="pb">Questões rápidas (Certo ou Errado)</h2>
