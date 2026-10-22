@@ -79,6 +79,20 @@
   .qd td{ border:1px solid var(--blue-bd); }
   .qd td.c{ text-align:center; font-weight:800; color:var(--blue); white-space:nowrap; }
   .qd tr:nth-child(even) td{ background:var(--blue-bg); }
+  .quad{ display:grid; grid-template-columns:1fr 1fr; margin:8px 0; break-inside:avoid; }
+  .quad > .qc{ padding:8px 10px 10px; }
+  .quad > .qc:nth-child(odd){ border-right:4px solid #a855f7; }
+  .quad > .qc:nth-child(-n+2){ border-bottom:4px solid #a855f7; }
+  .quad.uma > .qc{ border-bottom:0; }
+  .qt{ display:inline-block; font-size:17pt; font-weight:500; color:#1f2937; background:#f3f4f6; padding:2px 10px; margin:0 0 4px; line-height:1.25; }
+  .qa{ font-size:9pt; margin:2px 0 5px; }
+  .qa .k{ background:#e5e7eb; font-weight:700; padding:0 3px; border-radius:2px; }
+  .qc .qd{ min-width:100%; font-size:8.4pt; margin:3px 0; }
+  .qc .qd th{ font-size:7.6pt; }
+  .qc p, .qc li{ font-size:8.8pt; }
+  .qc .qd td.c{ white-space:normal; width:42%; }
+  .ante{ color:var(--red); font-weight:700; }
+  .depo{ color:#2563eb; font-weight:700; }
   .two{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
   .two > .box{ margin:0; }
   ol.q{ padding-left:28px; margin:4px 0; }
@@ -239,7 +253,63 @@ No caso do <b>art. 110</b>, a prescrição começa a correr:
 </ul>
 <div class="box att"><b class="lbl">Atenção para a prova</b>
 • Inc. I: o marco é o trânsito em julgado <b>para a acusação</b> (não para ambas as partes).<br>
-• Revogação de <b>sursis</b> ou de <b>livramento condicional</b>: conta da decisão que revoga.
+• Revogação de <b>sursis</b> ou de <b>livramento condicional</b>: conta do <b>trânsito em julgado da decisão que revoga</b>.
+</div>
+
+<div class="avoid">
+<h2>Painel — Prescrição e termo inicial: antes × depois do trânsito (arts. 109 a 112)</h2>
+<div class="quad">
+  <div class="qc">
+    <div class="qt">Prescrição antes</div>
+    <div class="qa">Art. 109 · <span class="k">Prescrição</span> <span class="ante">antes de transitar em julgado a sentença</span></div>
+    <p>Base: <b>máximo da pena cominada</b> (abstrata). P.U.: <b>restritivas de direito</b> → mesmos prazos.</p>
+    <table class="qd">
+      <tr><th>Pena máxima em abstrato</th><th>Prazo</th></tr>
+      <tr><td>Inferior a 1 ano</td><td class="c">3 anos</td></tr>
+      <tr><td>Igual a 1 ou, sendo superior, não excede 2</td><td class="c">4 anos</td></tr>
+      <tr><td>Superior a 2 e não excede 4</td><td class="c">8 anos</td></tr>
+      <tr><td>Superior a 4 e não excede 8</td><td class="c">12 anos</td></tr>
+      <tr><td>Superior a 8 e não excede 12</td><td class="c">16 anos</td></tr>
+      <tr><td>Superior a 12</td><td class="c">20 anos</td></tr>
+    </table>
+  </div>
+  <div class="qc">
+    <div class="qt">Prescrição depois</div>
+    <div class="qa">Art. 110 · <span class="k">Prescrição</span> <span class="depo">depois de transitar em julgado a sentença condenatória</span></div>
+    <table class="qd">
+      <tr><th>Situação</th><th>Regula-se por</th></tr>
+      <tr><td>Trânsito em julgado da condenação (caput)</td><td class="c">pena aplicada, prazos do art. 109</td></tr>
+      <tr><td>Condenado reincidente (caput)</td><td class="c">prazos + 1/3</td></tr>
+      <tr><td>Trânsito para a acusação ou recurso dela improvido (§ 1º)</td><td class="c">pena aplicada</td></tr>
+      <tr><td>Evasão ou revogação do livramento (art. 113)</td><td class="c">tempo que resta da pena</td></tr>
+    </table>
+    <p class="r" style="margin-top:4px">§ 1º: termo inicial <b>nunca</b> anterior à denúncia ou queixa — “em nenhuma hipótese”.</p>
+  </div>
+  <div class="qc">
+    <div class="qt">Termo inicial antes</div>
+    <div class="qa">Art. 111 · <span class="k">Termo inicial da prescrição</span> <span class="ante">antes do trânsito em julgado</span></div>
+    <table class="qd">
+      <tr><th>Situação</th><th>Começa a correr</th></tr>
+      <tr><td>Crime consumado (regra)</td><td class="c">dia da consumação</td></tr>
+      <tr><td>Tentativa</td><td class="c">cessou a atividade</td></tr>
+      <tr><td>Crime permanente</td><td class="c">cessou a permanência</td></tr>
+      <tr><td>Bigamia · falsificação/alteração de registro civil</td><td class="c">fato se tornou conhecido</td></tr>
+      <tr><td>Dignidade sexual ou violência contra criança/adolescente</td><td class="c">vítima completa 18 anos*</td></tr>
+    </table>
+    <p style="color:#6b7280;font-size:8pt">* salvo se a ação penal já tiver sido proposta.</p>
+  </div>
+  <div class="qc">
+    <div class="qt">Termo inicial após</div>
+    <div class="qa">Art. 112 · <span class="k">Termo inicial da prescrição</span> <span class="depo">após a sentença condenatória irrecorrível</span></div>
+    <table class="qd">
+      <tr><th>Situação (caso do art. 110)</th><th>Começa a correr</th></tr>
+      <tr><td>Condenação (inc. I)</td><td class="c">trânsito em julgado para a acusação</td></tr>
+      <tr><td>Revogação do sursis ou do livramento condicional (inc. I)</td><td class="c">trânsito em julgado da decisão que revoga</td></tr>
+      <tr><td>Interrupção da execução (inc. II)</td><td class="c">dia da interrupção**</td></tr>
+    </table>
+    <p style="color:#6b7280;font-size:8pt">** salvo quando o tempo da interrupção deva computar-se na pena.</p>
+  </div>
+</div>
 </div>
 
 <!-- ============ ART. 113 ============ -->
@@ -290,6 +360,7 @@ Espelho com o art. 110: reincidente <b>aumenta 1/3</b> · idade <b>reduz metade<
 </div>
 
 <!-- ============ ART. 116 ============ -->
+<div class="avoid">
 <h2>Art. 116 — Causas impeditivas da prescrição</h2>
 <div class="box regra"><b class="lbl">Regra central (caput)</b>
 Antes de passar em julgado a sentença final, a prescrição <b class="r">não corre</b>: <span class="mi">P.E.R.A</span>
@@ -301,6 +372,7 @@ Antes de passar em julgado a sentença final, a prescrição <b class="r">não c
   <li><span class="id">IV</span> Enquanto <b>não cumprido ou não rescindido</b> o <b><span class="ini">a</span>cordo de não persecução penal</b> (ANPP).</li>
   <li><span class="id">P.U.</span> <b>Depois</b> de passada em julgado a sentença condenatória, a prescrição não corre durante o tempo em que o condenado está <b>preso por outro motivo</b>.</li>
 </ul>
+</div>
 <div class="box att"><b class="lbl">Atenção para a prova</b>
 • Inc. III: só impede se embargos/recursos forem <b>inadmissíveis</b>.<br>
 • Inc. IV: ANPP — “não <b>cumprido</b> ou não <b>rescindido</b>”.<br>
@@ -377,18 +449,12 @@ O curso da prescrição <b class="r">interrompe-se</b>: <span class="mi">R.P.C +
 • <b>18</b> (vítima, art. 111, V) × <b>21</b> (agente, ao tempo do crime) × <b>70</b> (agente, na sentença) — art. 115.
 </div>
 
-<h3>Comparativos</h3>
+<h3 style="break-after:avoid">Comparativos</h3>
 <table>
   <tr><th style="width:22%"></th><th>Impeditivas / suspensivas (art. 116)</th><th>Interruptivas (art. 117)</th></tr>
   <tr><td><b>Efeito</b></td><td>A prescrição <b>não corre</b> enquanto dura a causa</td><td>Prazo <b>recomeça do zero</b> no dia da interrupção (§ 2º, salvo inc. V)</td></tr>
   <tr><td><b>Hipóteses</b></td><td>Questão prejudicial em outro processo · pena no exterior · ED/recursos inadmissíveis · ANPP · preso por outro motivo (após o trânsito)</td><td>Recebimento da denúncia/queixa · pronúncia · confirmação da pronúncia · publicação de condenação recorrível · início/continuação do cumprimento · reincidência</td></tr>
   <tr><td><b>Mnemônico</b></td><td><span class="mi">P.E.R.A</span></td><td><span class="mi">R.P.C + P.C.R</span></td></tr>
-</table>
-<table>
-  <tr><th style="width:22%"></th><th>Antes do trânsito em julgado</th><th>Depois do trânsito em julgado</th></tr>
-  <tr><td><b>Base de cálculo</b></td><td>Máximo da pena <b>cominada</b> (art. 109)</td><td>Pena <b>aplicada</b>, nos prazos do art. 109, + 1/3 se reincidente (art. 110)</td></tr>
-  <tr><td><b>Termo inicial</b></td><td>Art. 111 (consumação, tentativa, permanência, fato conhecido, 18 anos da vítima)</td><td>Art. 112 (trânsito para a acusação / revogação de sursis ou livramento; interrupção da execução)</td></tr>
-  <tr><td><b>Evasão / revogação do livramento</b></td><td>—</td><td>Tempo que <b>resta</b> da pena (art. 113)</td></tr>
 </table>
 <table>
   <tr><th style="width:22%"></th><th>Perdão do ofendido (art. 107, V)</th><th>Perdão judicial (arts. 107, IX, e 120)</th></tr>
