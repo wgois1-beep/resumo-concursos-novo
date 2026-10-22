@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Resumo CP arts. 107 a 120</title>
+<style>
+  :root{
+    --blue:#1d4ed8; --blue-bg:#eff6ff; --blue-bd:#bfdbfe;
+    --green:#15803d; --green-bg:#f0fdf4; --green-bd:#bbf7d0;
+    --orange:#c2410c; --orange-bg:#fff7ed; --orange-bd:#fed7aa;
+    --red:#b91c1c; --red-bg:#fef2f2; --red-bd:#fecaca;
+    --purple:#6d28d9; --purple-bg:#f5f3ff; --purple-bd:#ddd6fe;
+    --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb;
+  }
+  @page{ size:A4; margin:14mm 14mm 16mm 14mm;
+    @bottom-left{ content:"Código Penal — arts. 107 a 120 (Extinção da punibilidade)"; font:7.5pt "Inter",sans-serif; color:#6b7280; }
+    @bottom-right{ content:"Página " counter(page) " de " counter(pages); font:7.5pt "Inter",sans-serif; color:#6b7280; } }
+  *{ box-sizing:border-box; }
+  body{ font-family:"Inter",sans-serif; font-size:10.2pt; line-height:1.45; color:var(--ink); margin:0; background:#fff; }
+  h1{ font-size:16pt; margin:0 0 2px; color:#111827; }
+  .sub{ color:var(--muted); font-size:9pt; margin-bottom:8px; }
+  h2{ font-size:12.5pt; margin:14px 0 6px; padding:5px 10px; background:#111827; color:#fff; border-radius:5px; break-after:avoid; }
+  h2 .tag{ float:right; }
+  h3{ font-size:10.5pt; margin:10px 0 4px; color:#111827; break-after:avoid; }
+  p{ margin:3px 0; }
+  .box{ border:1px solid; border-left-width:5px; border-radius:5px; padding:6px 10px; margin:6px 0; break-inside:avoid; }
+  .box > b.lbl{ display:block; font-size:8.3pt; letter-spacing:.04em; text-transform:uppercase; margin-bottom:2px; }
+  .regra{ background:var(--blue-bg); border-color:var(--blue-bd); border-left-color:var(--blue); }
+  .regra > b.lbl{ color:var(--blue); }
+  .req{ background:var(--green-bg); border-color:var(--green-bd); border-left-color:var(--green); }
+  .req > b.lbl{ color:var(--green); }
+  .att{ background:var(--orange-bg); border-color:var(--orange-bd); border-left-color:var(--orange); }
+  .att > b.lbl{ color:var(--orange); }
+  .exc{ background:var(--red-bg); border-color:var(--red-bd); border-left-color:var(--red); }
+  .exc > b.lbl{ color:var(--red); }
+  .mn{ background:var(--purple-bg); border-color:var(--purple-bd); border-left-color:var(--purple); }
+  .mn > b.lbl{ color:var(--purple); }
+  .kw{ font-size:9pt; color:var(--muted); margin:3px 0 2px; }
+  .kw span{ display:inline-block; background:#f3f4f6; border:1px solid var(--line); border-radius:10px; padding:0 7px; margin:1px 2px; color:#374151; }
+  ul.disp{ list-style:none; padding:0; margin:3px 0; }
+  ul.disp li{ padding:2px 0 2px 46px; text-indent:-46px; border-bottom:1px dotted var(--line); }
+  ul.disp li .id, ul.disp li .tag{ text-indent:0; }
+  ul.disp li:last-child{ border-bottom:0; }
+  .id{ display:inline-block; min-width:46px; font-weight:700; color:var(--blue); }
+  .tag{ display:inline-block; font-size:7.3pt; font-weight:600; padding:0 6px; border-radius:8px; background:#dcfce7; color:#166534; border:1px solid #86efac; vertical-align:1px; margin-left:4px; white-space:nowrap; }
+  h2 .tag{ background:#22c55e; color:#fff; border-color:#22c55e; }
+  .r{ color:var(--red); font-weight:700; }
+  .o{ color:var(--orange); font-weight:700; }
+  .g{ color:var(--green); font-weight:700; }
+  .b{ color:var(--blue); font-weight:700; }
+  table{ width:100%; border-collapse:collapse; margin:6px 0; font-size:9.4pt; break-inside:avoid; }
+  th{ background:#1f2937; color:#fff; text-align:left; padding:4px 7px; font-weight:600; }
+  td{ border:1px solid var(--line); padding:4px 7px; vertical-align:top; }
+  tr:nth-child(even) td{ background:#fafafa; }
+  .num{ font-weight:800; font-size:11pt; color:var(--red); white-space:nowrap; }
+  .legend{ display:flex; flex-wrap:wrap; gap:6px; font-size:8.6pt; margin:6px 0 4px; }
+  .legend span{ padding:1px 8px; border-radius:4px; border-left:5px solid; }
+  .note{ font-size:8.8pt; color:#374151; background:#f9fafb; border:1px solid var(--line); border-radius:5px; padding:6px 10px; margin:4px 0 8px; }
+  .flow{ display:flex; align-items:stretch; gap:0; margin:6px 0; break-inside:avoid; font-size:8.8pt; }
+  .flow .st{ flex:1; border:1.5px solid var(--blue); background:var(--blue-bg); border-radius:6px; padding:5px 6px; text-align:center; }
+  .flow .st b{ display:block; color:var(--blue); }
+  .flow .ar{ width:16px; display:flex; align-items:center; justify-content:center; color:var(--muted); font-weight:700; }
+  .flow .st.x{ border-color:var(--red); background:var(--red-bg); }
+  .flow .st.x b{ color:var(--red); }
+  .flow .st.gr{ border-color:var(--green); background:var(--green-bg); }
+  .flow .st.gr b{ color:var(--green); }
+  .rank{ display:grid; grid-template-columns:repeat(8,1fr); gap:3px; margin:6px 0; break-inside:avoid; }
+  .rank div{ border:1px solid var(--blue-bd); background:var(--blue-bg); border-radius:5px; text-align:center; padding:4px 2px; font-size:8.3pt; line-height:1.25; }
+  .rank div i{ display:block; font-style:normal; font-weight:800; color:var(--blue); font-size:10pt; }
+  .rank div u{ display:block; text-decoration:none; font-weight:800; color:var(--purple); font-size:9.5pt; margin-top:2px; }
+  .mi{ display:inline-block; font-weight:800; font-size:9pt; color:var(--purple); background:var(--purple-bg); border:1px solid var(--purple-bd); border-radius:4px; padding:0 6px; margin-left:3px; text-indent:0; white-space:nowrap; letter-spacing:.03em; }
+  .mi small{ font-weight:500; color:#5b21b6; letter-spacing:0; }
+  .ini{ background:#6ee77a; color:#14532d; font-weight:800; border-radius:2px; padding:0 .5px; }
+  .ini[data-n]::after{ content:attr(data-n); font-size:6pt; font-weight:700; vertical-align:super; line-height:0; margin-left:.5px; color:#166534; }
+  .two{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .two > .box{ margin:0; }
+  ol.q{ padding-left:28px; margin:4px 0; }
+  ol.q li{ margin:3px 0; break-inside:avoid; }
+  .gab td:first-child{ width:34px; text-align:center; font-weight:700; }
+  .avoid{ break-inside:avoid; }
+  .pb{ break-before:page; }
+</style>
+</head>
+<body>
+
+<h1>Código Penal — Título VIII: Da Extinção da Punibilidade (arts. 107 a 120)</h1>
+<div class="sub">Resumo para memorização · Oficial de Justiça (marcações do material-fonte)</div>
+
+<div class="note">
+<b>Cobertura:</b> o material-fonte traz <b>apenas os arts. 107 a 120</b> do Código Penal (Título VIII, págs. 10–14 da apostila). Este resumo cobre <b>todos</b> esses dispositivos e somente eles. Os demais artigos do Código não constam do arquivo e não foram resumidos.
+<div class="legend">
+  <span style="border-color:var(--blue);background:var(--blue-bg)">Azul · regra</span>
+  <span style="border-color:var(--green);background:var(--green-bg)">Verde · requisitos/elementos</span>
+  <span style="border-color:var(--orange);background:var(--orange-bg)">Laranja · atenção para a prova</span>
+  <span style="border-color:var(--red);background:var(--red-bg)">Vermelho · exceções/pontos críticos</span>
+  <span style="border-color:var(--purple);background:var(--purple-bg)">Roxo · mnemônico de iniciais, junto ao dispositivo (recurso didático, não é texto legal)</span>
+  <span style="border-color:#22c55e;background:#dcfce7">Verde marca-texto · letra do mnemônico, grifada no texto do dispositivo</span>
+  <span class="tag" style="margin:0">OJ 2023</span> <span class="tag" style="margin:0">OJ 2024</span> <span style="border:0;padding:0">= cobrado em prova de Oficial de Justiça, conforme marcação do material-fonte</span>
+</div>
+</div>
+
+<!-- ============ ART. 107 ============ -->
+<h2>Art. 107 — Causas de extinção da punibilidade</h2>
+<div class="box regra"><b class="lbl">Regra central (caput)</b>
+Rol de causas que <b>extinguem a punibilidade</b> (incisos I a IX; VII e VIII revogados).
+</div>
+<ul class="disp">
+  <li><span class="id">I</span> <b>Morte do agente</b>.</li>
+  <li><span class="id">II</span> <b><span class="ini">A</span>nistia, <span class="ini">G</span>raça ou <span class="ini">I</span>ndulto</b>. <span class="mi">A.G.I</span></li>
+  <li><span class="id">III</span> <b>Retroatividade de lei</b> que <b>não mais considera o fato como criminoso</b>.</li>
+  <li><span class="id">IV</span> <b><span class="ini">P</span>rescrição, <span class="ini">D</span>ecadência ou <span class="ini">P</span>erempção</b>. <span class="mi">P.D.P</span></li>
+  <li><span class="id">V</span> <b>Renúncia</b> do direito de queixa ou <b>perdão aceito</b>, nos crimes de <b class="r">ação privada</b>.</li>
+  <li><span class="id">VI</span> <b>Retratação do agente</b>, <b class="o">nos casos em que a lei a admite</b>.</li>
+  <li><span class="id">VII</span> <i>(Revogado)</i></li>
+  <li><span class="id">VIII</span> <i>(Revogado)</i></li>
+  <li><span class="id">IX</span> <b>Perdão judicial</b>, <b class="o">nos casos previstos em lei</b>.</li>
+</ul>
+<div class="kw">Palavras-chave: <span>perdão do ofendido = precisa ser ACEITO</span><span>só ação privada (inc. V)</span><span>retratação / perdão judicial: só quando a lei prevê</span></div>
+<div class="box att"><b class="lbl">Atenção para a prova</b>
+• Inc. V: perdão do ofendido só extingue se <b>aceito</b>, e só em <b>ação privada</b>. Perdão <b>judicial</b> (inc. IX) é outra coisa: concedido pelo juiz, nos casos previstos em lei.<br>
+• Incs. VI e IX não valem para qualquer crime: só “nos casos em que a lei admite/prevê”.<br>
+• VII e VIII estão <b>revogados</b> — o rol vigente tem 7 incisos.
+</div>
+
+<!-- ============ ART. 108 ============ -->
+<h2>Art. 108 — Autonomia da extinção (crime pressuposto e conexão)</h2>
+<div class="box regra"><b class="lbl">Regra central</b>
+A extinção da punibilidade de crime que é <b>pressuposto, elemento constitutivo ou circunstância agravante</b> de outro <b class="r">não se estende</b> a este.
+</div>
+<ul class="disp">
+  <li><span class="id">Conexos</span> 2ª parte: a extinção da punibilidade de um deles <b class="r">não impede</b>, quanto aos outros, a <b>agravação da pena resultante da conexão</b>.</li>
+</ul>
+
+<!-- ============ ART. 109 ============ -->
+<h2>Art. 109 — Prescrição antes do trânsito em julgado (pena em abstrato) <span class="tag">OJ 2024</span></h2>
+<div class="box regra"><b class="lbl">Regra central (caput)</b>
+Antes de transitar em julgado a sentença final, a prescrição regula-se pelo <b>máximo da pena privativa de liberdade cominada</b> ao crime — <b class="o">salvo o disposto no § 1º do art. 110</b>. <span class="mi">20 → 16 → 12 → 8 → 4 → 3</span>
+</div>
+<ul class="disp">
+  <li><span class="id">I</span> <span class="num">20 anos</span> — pena máxima <b>superior a 12</b>.</li>
+  <li><span class="id">II</span> <span class="num">16 anos</span> — máxima <b>superior a 8</b> e não excede 12.</li>
+  <li><span class="id">III</span> <span class="num">12 anos</span> — máxima <b>superior a 4</b> e não excede 8.</li>
+  <li><span class="id">IV</span> <span class="num">8 anos</span> — máxima <b>superior a 2</b> e não excede 4.</li>
+  <li><span class="id">V</span> <span class="num">4 anos</span> — máxima <b>igual a 1 ano</b> ou, sendo superior, não excede 2.</li>
+  <li><span class="id">VI</span> <span class="num">3 anos</span> — máxima <b class="r">inferior a 1 ano</b>.</li>
+  <li><span class="id">P.U.</span> <span class="tag">OJ 2023</span> <b>Penas restritivas de direito</b>: aplicam-se os <b>mesmos prazos</b> das privativas de liberdade.</li>
+</ul>
+<div class="rank" style="grid-template-columns:repeat(6,1fr)">
+  <div><i>20 anos</i>pena &gt; 12</div>
+  <div><i>16 anos</i>&gt; 8 até 12</div>
+  <div><i>12 anos</i>&gt; 4 até 8</div>
+  <div><i>8 anos</i>&gt; 2 até 4</div>
+  <div><i>4 anos</i>1 até 2</div>
+  <div><i>3 anos</i>&lt; 1</div>
+</div>
+<div class="box att"><b class="lbl">Atenção para a prova</b>
+• Base = <b>máximo</b> da pena <b>cominada</b> (abstrata), não a mínima nem a aplicada.<br>
+• Pena máxima de <b>exatamente 1 ano</b> → <b>4 anos</b> (inc. V); só <b>abaixo</b> de 1 ano → <b>3 anos</b>.<br>
+• Limites “não excede”: pena máxima de exatamente 12 → 16 anos; exatamente 8 → 12; exatamente 4 → 8; exatamente 2 → 4.<br>
+• Restritivas de direito: <b>mesmos prazos</b> — não há tabela própria.
+</div>
+
+<!-- ============ ART. 110 ============ -->
+<h2>Art. 110 — Prescrição depois do trânsito em julgado da condenação <span class="tag">OJ 2024</span></h2>
+<div class="box regra"><b class="lbl">Regra central (caput)</b>
+Depois de transitar em julgado a sentença condenatória, a prescrição regula-se pela <b>pena aplicada</b>, nos prazos do art. 109, os quais <b class="r">aumentam de um terço</b> (<span class="num">+ 1/3</span>) se o condenado é <b>reincidente</b>.
+</div>
+<ul class="disp">
+  <li><span class="id">§ 1º</span> <span class="tag">OJ 2024</span> Com <b>trânsito em julgado para a acusação</b> ou depois de <b>improvido seu recurso</b>: regula-se pela <b>pena aplicada</b>, <b class="r">não podendo, em nenhuma hipótese</b>, ter termo inicial <b>data anterior à da denúncia ou queixa</b>.</li>
+</ul>
+<div class="two">
+<div class="box regra" style="margin:0"><b class="lbl">Antes do trânsito (art. 109)</b>
+Máximo da pena <b>cominada</b> (abstrata).
+</div>
+<div class="box regra" style="margin:0"><b class="lbl">Depois do trânsito / trânsito para a acusação (art. 110)</b>
+Pena <b>aplicada</b> (concreta) + 1/3 se reincidente (caput).
+</div>
+</div>
+<div class="box att"><b class="lbl">Atenção para a prova</b>
+• O aumento de <b>1/3</b> é para o <b>reincidente</b> e incide na prescrição <b>depois</b> do trânsito (caput do art. 110).<br>
+• § 1º: o termo inicial <b>nunca</b> pode ser anterior à <b>denúncia ou queixa</b> (“em nenhuma hipótese”).<br>
+• O material mostra apenas o caput e o § 1º do art. 110.
+</div>
+
+<!-- ============ ART. 111 ============ -->
+<div class="avoid">
+<h2>Art. 111 — Termo inicial da prescrição antes do trânsito em julgado</h2>
+<div class="box regra"><b class="lbl">Regra central (caput)</b>
+A prescrição, antes de transitar em julgado a sentença final, <b>começa a correr</b>: <span class="mi">C.A.R.P.A <small>fora da ordem da lei</small></span>
+</div>
+<ul class="disp">
+  <li><span class="id">I</span> Do dia em que o crime se <b><span class="ini" data-n="1">c</span>onsumou</b>.</li>
+  <li><span class="id">II</span> <b>Tentativa</b>: do dia em que cessou a <b><span class="ini" data-n="2">a</span>tividade criminosa</b>.</li>
+  <li><span class="id">III</span> Crimes <b><span class="ini" data-n="4">p</span>ermanentes</b>: do dia em que <b>cessou a permanência</b>.</li>
+  <li><span class="id">IV</span> <b>Bigamia</b> e <b>falsificação ou alteração de assentamento do <span class="ini" data-n="3">r</span>egistro civil</b>: da data em que o fato <b class="r">se tornou conhecido</b>.</li>
+  <li><span class="id">V</span> <span class="tag">OJ 2024</span> Crimes contra a <b>dignidade sexual</b> ou que envolvam <b>violência contra a criança e o <span class="ini" data-n="5">a</span>dolescente</b> (neste Código ou em legislação especial): da data em que a vítima <b>completar <span class="num">18 anos</span></b>, <b class="o">salvo se a esse tempo já houver sido proposta a ação penal</b>.</li>
+</ul>
+</div>
+<div class="box exc"><b class="lbl">Exceção — inc. V</b>
+Se a ação penal <b>já tiver sido proposta</b> antes de a vítima completar 18 anos, não se espera a maioridade para iniciar a contagem.
+</div>
+<div class="box att"><b class="lbl">Atenção para a prova</b>
+• Tentativa: conta do dia em que <b>cessou a atividade</b> — não da data do primeiro ato.<br>
+• Bigamia/registro civil: do dia em que o fato <b>se tornou conhecido</b> — não da consumação.<br>
+• Inc. V abrange crimes do <b>CP ou de legislação especial</b>; idade-marco: <b>18 anos</b> da vítima.
+</div>
+
+<!-- ============ ART. 112 ============ -->
+<h2>Art. 112 — Termo inicial da prescrição após a sentença condenatória irrecorrível</h2>
+<div class="box regra"><b class="lbl">Regra central (caput)</b>
+No caso do <b>art. 110</b>, a prescrição começa a correr:
+</div>
+<ul class="disp">
+  <li><span class="id">I</span> Do dia em que <b>transita em julgado a sentença condenatória, para a acusação</b>, ou a que <b>revoga</b> a suspensão condicional da pena (sursis) ou o livramento condicional.</li>
+  <li><span class="id">II</span> Do dia em que se <b>interrompe a execução</b>, <b class="o">salvo quando o tempo da interrupção deva computar-se na pena</b>.</li>
+</ul>
+<div class="box att"><b class="lbl">Atenção para a prova</b>
+• Inc. I: o marco é o trânsito em julgado <b>para a acusação</b> (não para ambas as partes).<br>
+• Revogação de <b>sursis</b> ou de <b>livramento condicional</b>: conta da decisão que revoga.
+</div>
+
+<!-- ============ ART. 113 ============ -->
+<h2>Art. 113 — Evasão do condenado ou revogação do livramento condicional</h2>
+<div class="box regra"><b class="lbl">Regra central</b>
+Se o condenado <b>evadir-se</b> ou se for <b>revogado o livramento condicional</b>, a prescrição é regulada pelo <b class="r">tempo que resta da pena</b>.
+</div>
+
+<!-- ============ ART. 114 ============ -->
+<div class="avoid">
+<h2>Art. 114 — Prescrição da pena de multa <span class="tag">OJ 2023</span></h2>
+<div class="box regra"><b class="lbl">Regra central (caput)</b>
+A prescrição da pena de multa ocorrerá:
+</div>
+<ul class="disp">
+  <li><span class="id">I</span> Em <span class="num">2 anos</span>, quando a multa for a <b>única</b> cominada ou aplicada.</li>
+  <li><span class="id">II</span> No <b>mesmo prazo da pena privativa de liberdade</b>, quando a multa for <b>alternativa ou cumulativamente cominada</b> ou <b>cumulativamente aplicada</b>.</li>
+</ul>
+<div class="box att"><b class="lbl">Atenção para a prova</b>
+• Multa <b>isolada</b> = <b>2 anos</b> (não 3, que é o prazo do art. 109, VI).<br>
+• Multa <b>junto</b> com prisão (alternativa/cumulativa) = segue o prazo da <b>privativa de liberdade</b>.
+</div>
+
+</div>
+<!-- ============ ART. 115 ============ -->
+<h2>Art. 115 — Redução dos prazos de prescrição</h2>
+<div class="box regra"><b class="lbl">Regra central</b>
+Prazos de prescrição <b class="r">reduzidos de metade</b> quando o criminoso era:
+</div>
+<ul class="disp">
+  <li><span class="id">1</span> <b>menor de <span class="num">21 anos</span></b> — <b>ao tempo do crime</b>; ou</li>
+  <li><span class="id">2</span> <b>maior de <span class="num">70 anos</span></b> — <b>na data da sentença</b>.</li>
+</ul>
+<div class="box exc"><b class="lbl">Exceção</b>
+<b>Não</b> se reduz se o crime envolver <b>violência sexual contra a mulher</b>.
+</div>
+<div class="box att"><b class="lbl">Atenção para a prova</b>
+• Os marcos são diferentes: <b>21</b> → <b>tempo do crime</b>; <b>70</b> → <b>data da sentença</b>. A banca costuma trocar.<br>
+• Redução é de <b>metade</b> (não de 1/3 — 1/3 é o <b>aumento</b> do reincidente, art. 110).
+</div>
+
+<!-- ============ ART. 116 ============ -->
+<h2>Art. 116 — Causas impeditivas da prescrição</h2>
+<div class="box regra"><b class="lbl">Regra central (caput)</b>
+Antes de passar em julgado a sentença final, a prescrição <b class="r">não corre</b>: <span class="mi">P.E.R.A</span>
+</div>
+<ul class="disp">
+  <li><span class="id">I</span> Enquanto não resolvida, em outro <b><span class="ini">p</span>rocesso</b>, questão de que dependa o <b>reconhecimento da existência do crime</b>.</li>
+  <li><span class="id">II</span> Enquanto o agente cumpre <b>pena no <span class="ini">e</span>xterior</b>.</li>
+  <li><span class="id">III</span> Na pendência de <b>embargos de declaração</b> ou de <b><span class="ini">r</span>ecursos aos Tribunais Superiores</b>, <b class="r">quando inadmissíveis</b>.</li>
+  <li><span class="id">IV</span> Enquanto <b>não cumprido ou não rescindido</b> o <b><span class="ini">a</span>cordo de não persecução penal</b> (ANPP).</li>
+  <li><span class="id">P.U.</span> <b>Depois</b> de passada em julgado a sentença condenatória, a prescrição não corre durante o tempo em que o condenado está <b>preso por outro motivo</b>.</li>
+</ul>
+<div class="box att"><b class="lbl">Atenção para a prova</b>
+• Inc. III: só impede se embargos/recursos forem <b>inadmissíveis</b>.<br>
+• Inc. IV: ANPP — “não <b>cumprido</b> ou não <b>rescindido</b>”.<br>
+• Caput = <b>antes</b> do trânsito; P.U. = <b>depois</b> do trânsito (preso por outro motivo).
+</div>
+
+<!-- ============ ART. 117 ============ -->
+<div class="avoid">
+<h2>Art. 117 — Causas interruptivas da prescrição</h2>
+<div class="box regra"><b class="lbl">Regra central (caput)</b>
+O curso da prescrição <b class="r">interrompe-se</b>: <span class="mi">R.P.C + P.C.R <small>espelho</small></span>
+</div>
+<ul class="disp">
+  <li><span class="id">I</span> Pelo <b><span class="ini">r</span>ecebimento</b> da denúncia ou da queixa <b class="o">(recebimento, não oferecimento)</b>.</li>
+  <li><span class="id">II</span> Pela <b><span class="ini">p</span>ronúncia</b>.</li>
+  <li><span class="id">III</span> Pela decisão <b><span class="ini">c</span>onfirmatória da pronúncia</b>.</li>
+  <li><span class="id">IV</span> Pela <b><span class="ini">p</span>ublicação</b> da sentença ou acórdão <b>condenatórios recorríveis</b>.</li>
+  <li><span class="id">V</span> Pelo início ou continuação do <b><span class="ini">c</span>umprimento da pena</b>.</li>
+  <li><span class="id">VI</span> Pela <b><span class="ini">r</span>eincidência</b>.</li>
+  <li><span class="id">§ 1º</span> <b>Exceto incs. V e VI</b>, a interrupção produz efeitos <b>relativamente a todos os autores</b> do crime. <b>Crimes conexos</b> objeto do <b>mesmo processo</b>: a interrupção relativa a qualquer deles <b>estende-se aos demais</b>.</li>
+  <li><span class="id">§ 2º</span> Interrompida a prescrição, <b class="o">salvo a hipótese do inc. V</b>, <b>todo o prazo</b> começa a correr <b>novamente, do dia da interrupção</b>.</li>
+</ul>
+</div>
+<div class="box exc"><b class="lbl">Exceções que caem</b>
+• <b>§ 1º</b>: V (cumprimento da pena) e VI (reincidência) <b>não se comunicam</b> aos demais autores.<br>
+• <b>§ 2º</b>: só o inc. V não faz o prazo recomeçar do zero no dia da interrupção.
+</div>
+<div class="flow">
+  <div class="st"><b>I · Recebimento</b>denúncia/queixa</div><div class="ar">→</div>
+  <div class="st"><b>II · Pronúncia</b></div><div class="ar">→</div>
+  <div class="st"><b>III · Confirmação</b>da pronúncia</div><div class="ar">→</div>
+  <div class="st"><b>IV · Publicação</b>condenação recorrível</div><div class="ar">→</div>
+  <div class="st x"><b>V · Cumprimento</b>início/continuação</div><div class="ar">|</div>
+  <div class="st x"><b>VI · Reincidência</b></div>
+</div>
+
+<!-- ============ ARTS. 118 A 120 ============ -->
+<div class="avoid">
+<h2>Arts. 118 a 120 — Penas mais leves, concurso de crimes e perdão judicial</h2>
+<ul class="disp">
+  <li><span class="id">Art. 118</span> As <b>penas mais leves</b> prescrevem <b>com as mais graves</b>.</li>
+  <li><span class="id">Art. 119</span> <b>Concurso de crimes</b>: a extinção da punibilidade incide sobre a pena de <b>cada um, isoladamente</b>.</li>
+  <li><span class="id">Art. 120</span> A sentença que concede <b>perdão judicial</b> <b class="r">não será considerada para efeitos de reincidência</b>.</li>
+</ul>
+</div>
+<div class="box att"><b class="lbl">Atenção para a prova</b>
+• Concurso de crimes: prescrição/extinção sobre <b>cada pena isoladamente</b> — não sobre a soma.<br>
+• Perdão judicial: <b>não gera reincidência</b>.
+</div>
+
+<!-- ============ QUADROS DE REVISÃO ============ -->
+<h2>Quadros de revisão</h2>
+<h3>Todos os números do material</h3>
+<table>
+  <tr><th style="width:110px">Número</th><th>O que é</th><th style="width:120px">Dispositivo</th></tr>
+  <tr><td class="num">20 anos</td><td>Prescrição se pena máxima &gt; 12 anos</td><td>Art. 109, I</td></tr>
+  <tr><td class="num">16 anos</td><td>Pena máxima &gt; 8 e ≤ 12</td><td>Art. 109, II</td></tr>
+  <tr><td class="num">12 anos</td><td>Pena máxima &gt; 4 e ≤ 8</td><td>Art. 109, III</td></tr>
+  <tr><td class="num">8 anos</td><td>Pena máxima &gt; 2 e ≤ 4</td><td>Art. 109, IV</td></tr>
+  <tr><td class="num">4 anos</td><td>Pena máxima = 1 ou &gt; 1 e ≤ 2</td><td>Art. 109, V</td></tr>
+  <tr><td class="num">3 anos</td><td>Pena máxima &lt; 1 ano</td><td>Art. 109, VI</td></tr>
+  <tr><td class="num">+ 1/3</td><td>Aumento dos prazos (prescrição após o trânsito) se reincidente</td><td>Art. 110, caput</td></tr>
+  <tr><td class="num">18 anos</td><td>Idade da vítima que dá início à prescrição (crimes sexuais / violência contra criança e adolescente)</td><td>Art. 111, V</td></tr>
+  <tr><td class="num">2 anos</td><td>Prescrição da multa única (cominada ou aplicada)</td><td>Art. 114, I</td></tr>
+  <tr><td class="num">½ (metade)</td><td>Redução dos prazos de prescrição</td><td>Art. 115</td></tr>
+  <tr><td class="num">21 anos</td><td>Menor de 21 ao tempo do crime → prazo pela metade</td><td>Art. 115</td></tr>
+  <tr><td class="num">70 anos</td><td>Maior de 70 na data da sentença → prazo pela metade</td><td>Art. 115</td></tr>
+</table>
+<div class="box exc"><b class="lbl">Números repetidos com sentidos diferentes</b>
+• <b>12, 8, 4</b> aparecem como <b>limite de pena</b> e como <b>prazo prescricional</b> no art. 109 (ex.: pena &gt; 4 até 8 → prescreve em 12).<br>
+• <b>2 anos</b>: limite de pena no art. 109, IV/V <b>e</b> prazo da multa isolada (art. 114, I).<br>
+• <b>1/3</b> = aumento (reincidente, art. 110) × <b>metade</b> = redução (idade, art. 115).<br>
+• <b>18</b> (vítima, art. 111, V) × <b>21</b> (agente, ao tempo do crime) × <b>70</b> (agente, na sentença) — art. 115.
+</div>
+
+<h3>Comparativos</h3>
+<table>
+  <tr><th style="width:22%"></th><th>Impeditivas / suspensivas (art. 116)</th><th>Interruptivas (art. 117)</th></tr>
+  <tr><td><b>Efeito</b></td><td>A prescrição <b>não corre</b> enquanto dura a causa</td><td>Prazo <b>recomeça do zero</b> no dia da interrupção (§ 2º, salvo inc. V)</td></tr>
+  <tr><td><b>Hipóteses</b></td><td>Questão prejudicial em outro processo · pena no exterior · ED/recursos inadmissíveis · ANPP · preso por outro motivo (após o trânsito)</td><td>Recebimento da denúncia/queixa · pronúncia · confirmação da pronúncia · publicação de condenação recorrível · início/continuação do cumprimento · reincidência</td></tr>
+  <tr><td><b>Mnemônico</b></td><td><span class="mi">P.E.R.A</span></td><td><span class="mi">R.P.C + P.C.R</span></td></tr>
+</table>
+<table>
+  <tr><th style="width:22%"></th><th>Antes do trânsito em julgado</th><th>Depois do trânsito em julgado</th></tr>
+  <tr><td><b>Base de cálculo</b></td><td>Máximo da pena <b>cominada</b> (art. 109)</td><td>Pena <b>aplicada</b>, nos prazos do art. 109, + 1/3 se reincidente (art. 110)</td></tr>
+  <tr><td><b>Termo inicial</b></td><td>Art. 111 (consumação, tentativa, permanência, fato conhecido, 18 anos da vítima)</td><td>Art. 112 (trânsito para a acusação / revogação de sursis ou livramento; interrupção da execução)</td></tr>
+  <tr><td><b>Evasão / revogação do livramento</b></td><td>—</td><td>Tempo que <b>resta</b> da pena (art. 113)</td></tr>
+</table>
+<table>
+  <tr><th style="width:22%"></th><th>Perdão do ofendido (art. 107, V)</th><th>Perdão judicial (arts. 107, IX, e 120)</th></tr>
+  <tr><td><b>Quem concede</b></td><td>O ofendido</td><td>O juiz</td></tr>
+  <tr><td><b>Requisito</b></td><td>Precisa ser <b>aceito</b>; só em <b>ação privada</b></td><td>Só nos <b>casos previstos em lei</b></td></tr>
+  <tr><td><b>Reincidência</b></td><td>—</td><td>A sentença <b>não</b> é considerada para reincidência (art. 120)</td></tr>
+</table>
+
+<!-- ============ QUESTÕES ============ -->
+<h2 class="pb">Questões rápidas (Certo ou Errado)</h2>
+<ol class="q">
+  <li>Extingue-se a punibilidade pelo perdão do ofendido, ainda que não aceito, nos crimes de ação privada.</li>
+  <li>A anistia, a graça e o indulto são causas de extinção da punibilidade.</li>
+  <li>A retratação do agente extingue a punibilidade em qualquer crime.</li>
+  <li>A extinção da punibilidade de crime que é pressuposto de outro estende-se a este.</li>
+  <li>Antes do trânsito em julgado da sentença final, a prescrição regula-se pelo máximo da pena privativa de liberdade cominada ao crime, salvo o disposto no § 1º do art. 110.</li>
+  <li>Prescreve em 16 anos o crime cuja pena máxima é superior a 8 anos e não excede a 12.</li>
+  <li>Se o máximo da pena é igual a 1 ano, a prescrição ocorre em 3 anos.</li>
+  <li>Às penas restritivas de direito aplicam-se prazos de prescrição próprios, menores que os das privativas de liberdade.</li>
+  <li>Depois do trânsito em julgado da sentença condenatória, a prescrição regula-se pela pena aplicada, com prazos aumentados de metade se o condenado é reincidente.</li>
+  <li>Na prescrição regulada pela pena aplicada, após o trânsito em julgado para a acusação, o termo inicial não pode, em nenhuma hipótese, ser data anterior à da denúncia ou queixa.</li>
+  <li>No caso de tentativa, a prescrição começa a correr do dia em que se iniciou a atividade criminosa.</li>
+  <li>Nos crimes de bigamia, a prescrição começa a correr da data em que o fato se tornou conhecido.</li>
+  <li>Nos crimes contra a dignidade sexual de criança ou adolescente, a prescrição começa a correr da data em que a vítima completar 18 anos, salvo se a esse tempo já houver sido proposta a ação penal.</li>
+  <li>No caso de evadir-se o condenado, a prescrição é regulada pela pena total aplicada.</li>
+  <li>A prescrição da pena de multa ocorre em 2 anos quando a multa for a única cominada ou aplicada.</li>
+  <li>São reduzidos de metade os prazos de prescrição quando o criminoso era, na data da sentença, menor de 21 anos.</li>
+  <li>Antes de passar em julgado a sentença final, a prescrição não corre enquanto não cumprido ou não rescindido o acordo de não persecução penal.</li>
+  <li>A pendência de recursos aos Tribunais Superiores impede o curso da prescrição, sejam eles admissíveis ou não.</li>
+  <li>O oferecimento da denúncia interrompe o curso da prescrição.</li>
+  <li>A interrupção da prescrição pela reincidência produz efeitos relativamente a todos os autores do crime.</li>
+  <li>Interrompida a prescrição, salvo a hipótese de início ou continuação do cumprimento da pena, todo o prazo começa a correr novamente do dia da interrupção.</li>
+  <li>No concurso de crimes, a extinção da punibilidade incide sobre a pena de cada um, isoladamente.</li>
+  <li>A sentença que concede perdão judicial será considerada para efeitos de reincidência.</li>
+</ol>
+<h3>Gabarito</h3>
+<table class="gab">
+  <tr><th>Nº</th><th style="width:42px">G</th><th>Justificativa</th><th style="width:120px">Dispositivo</th></tr>
+  <tr><td>1</td><td class="r">E</td><td>O perdão precisa ser <b>aceito</b>.</td><td>Art. 107, V</td></tr>
+  <tr><td>2</td><td class="g">C</td><td>Literal.</td><td>Art. 107, II</td></tr>
+  <tr><td>3</td><td class="r">E</td><td>Só nos casos em que a lei a admite.</td><td>Art. 107, VI</td></tr>
+  <tr><td>4</td><td class="r">E</td><td><b>Não</b> se estende.</td><td>Art. 108</td></tr>
+  <tr><td>5</td><td class="g">C</td><td>Literal.</td><td>Art. 109, caput</td></tr>
+  <tr><td>6</td><td class="g">C</td><td>Literal.</td><td>Art. 109, II</td></tr>
+  <tr><td>7</td><td class="r">E</td><td>Pena máxima igual a 1 ano → <b>4 anos</b>; 3 anos é para pena inferior a 1.</td><td>Art. 109, V e VI</td></tr>
+  <tr><td>8</td><td class="r">E</td><td>Aplicam-se os <b>mesmos prazos</b>.</td><td>Art. 109, p.u.</td></tr>
+  <tr><td>9</td><td class="r">E</td><td>Aumento de <b>um terço</b>, não de metade.</td><td>Art. 110, caput</td></tr>
+  <tr><td>10</td><td class="g">C</td><td>Literal.</td><td>Art. 110, § 1º</td></tr>
+  <tr><td>11</td><td class="r">E</td><td>Do dia em que <b>cessou</b> a atividade criminosa.</td><td>Art. 111, II</td></tr>
+  <tr><td>12</td><td class="g">C</td><td>Literal.</td><td>Art. 111, IV</td></tr>
+  <tr><td>13</td><td class="g">C</td><td>Literal.</td><td>Art. 111, V</td></tr>
+  <tr><td>14</td><td class="r">E</td><td>Regulada pelo <b>tempo que resta</b> da pena.</td><td>Art. 113</td></tr>
+  <tr><td>15</td><td class="g">C</td><td>Literal.</td><td>Art. 114, I</td></tr>
+  <tr><td>16</td><td class="r">E</td><td>Menor de 21 é aferido <b>ao tempo do crime</b>; na data da sentença, é o maior de 70.</td><td>Art. 115</td></tr>
+  <tr><td>17</td><td class="g">C</td><td>Literal.</td><td>Art. 116, IV</td></tr>
+  <tr><td>18</td><td class="r">E</td><td>Só quando <b>inadmissíveis</b>.</td><td>Art. 116, III</td></tr>
+  <tr><td>19</td><td class="r">E</td><td>Interrompe o <b>recebimento</b> da denúncia ou queixa.</td><td>Art. 117, I</td></tr>
+  <tr><td>20</td><td class="r">E</td><td>Reincidência (inc. VI) é exceção: não se estende aos demais autores.</td><td>Art. 117, § 1º</td></tr>
+  <tr><td>21</td><td class="g">C</td><td>Literal.</td><td>Art. 117, § 2º</td></tr>
+  <tr><td>22</td><td class="g">C</td><td>Literal.</td><td>Art. 119</td></tr>
+  <tr><td>23</td><td class="r">E</td><td><b>Não</b> será considerada.</td><td>Art. 120</td></tr>
+</table>
+
+<div class="note avoid">
+<b>Conferência de cobertura (inventário do material-fonte):</b> Art. 107 (caput, I a IX; VII e VIII revogados) ✔ · Art. 108 (1ª e 2ª partes) ✔ · Art. 109 (caput, I a VI, parágrafo único) ✔ · Art. 110 (caput, § 1º) ✔ · Art. 111 (caput, I a V) ✔ · Art. 112 (caput, I e II) ✔ · Art. 113 ✔ · Art. 114 (caput, I e II) ✔ · Art. 115 ✔ · Art. 116 (caput, I a IV, parágrafo único) ✔ · Art. 117 (caput, I a VI, §§ 1º e 2º) ✔ · Art. 118 ✔ · Art. 119 ✔ · Art. 120 ✔<br>
+<b>Remissões a dispositivos fora do material</b> (citados, não resumidos): nenhuma — as remissões do material (art. 110, § 1º, no art. 109; art. 110 no art. 112; incisos V e VI no art. 117) são internas ao recorte.<br>
+<b>Limitações do arquivo:</b> PDF sem camada de texto (impressão em imagem); conteúdo lido página a página, todo legível. O arquivo mostra apenas o caput e o § 1º do art. 110.
+</div>
+</body>
+</html>
