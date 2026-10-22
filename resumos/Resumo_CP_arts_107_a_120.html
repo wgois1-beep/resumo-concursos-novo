@@ -74,6 +74,11 @@
   .ini[data-n]::after{ content:attr(data-n); font-size:6pt; font-weight:700; vertical-align:super; line-height:0; margin-left:.5px; color:#166534; }
   .vin{ display:block; font-size:9.2pt; color:#4c1d95; background:var(--purple-bg); border:1.5px dashed #a78bfa; border-radius:5px; padding:4px 9px; margin:5px 0; break-inside:avoid; }
   .vin > b:first-child{ color:var(--purple); text-transform:uppercase; font-size:8.2pt; letter-spacing:.04em; margin-right:4px; }
+  .qd{ width:auto; min-width:70%; margin:6px 0; font-size:9.6pt; }
+  .qd th{ background:var(--blue); color:#fff; text-align:center; text-transform:uppercase; font-size:8.6pt; letter-spacing:.03em; }
+  .qd td{ border:1px solid var(--blue-bd); }
+  .qd td.c{ text-align:center; font-weight:800; color:var(--blue); white-space:nowrap; }
+  .qd tr:nth-child(even) td{ background:var(--blue-bg); }
   .two{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
   .two > .box{ margin:0; }
   ol.q{ padding-left:28px; margin:4px 0; }
@@ -148,14 +153,15 @@ Antes de transitar em julgado a sentença final, a prescrição regula-se pelo <
   <li><span class="id">VI</span> <span class="num">3 anos</span> — máxima <b class="r">inferior a 1 ano</b>.</li>
   <li><span class="id">P.U.</span> <span class="tag">OJ 2023</span> <b>Penas restritivas de direito</b>: aplicam-se os <b>mesmos prazos</b> das privativas de liberdade.</li>
 </ul>
-<div class="rank" style="grid-template-columns:repeat(6,1fr)">
-  <div><i>20 anos</i>pena &gt; 12</div>
-  <div><i>16 anos</i>&gt; 8 até 12</div>
-  <div><i>12 anos</i>&gt; 4 até 8</div>
-  <div><i>8 anos</i>&gt; 2 até 4</div>
-  <div><i>4 anos</i>1 até 2</div>
-  <div><i>3 anos</i>&lt; 1</div>
-</div>
+<table class="qd">
+  <tr><th>Pena máxima em abstrato</th><th style="width:150px">Prazo prescricional</th></tr>
+  <tr><td>Inferior a 1 ano</td><td class="c">3 anos</td></tr>
+  <tr><td>Igual a 1 ano ou, sendo superior, não excede 2 anos</td><td class="c">4 anos</td></tr>
+  <tr><td>Superior a 2 e não excede 4 anos</td><td class="c">8 anos</td></tr>
+  <tr><td>Superior a 4 e não excede 8 anos</td><td class="c">12 anos</td></tr>
+  <tr><td>Superior a 8 e não excede 12 anos</td><td class="c">16 anos</td></tr>
+  <tr><td>Superior a 12 anos</td><td class="c">20 anos</td></tr>
+</table>
 <div class="vin"><b>Vínculo</b>
 <b>Prazos</b> (de baixo para cima): <span class="num">3</span>, <span class="num">4</span> e daí <b>soma 4</b>: 4 → 8 → 12 → 16 → 20.<br>
 <b>Penas</b> (de cima para baixo): <b>tira 4</b>: 12 → 8 → 4; depois <b>metade</b>: 4 → 2 → 1 <span style="color:#6b7280">(o “tira 4” quebra abaixo de 4)</span>.<br>
@@ -204,6 +210,15 @@ A prescrição, antes de transitar em julgado a sentença final, <b>começa a co
   <li><span class="id">V</span> <span class="tag">OJ 2024</span> Crimes contra a <b>dignidade sexual</b> ou que envolvam <b>violência contra a criança e o <span class="ini" data-n="5">a</span>dolescente</b> (neste Código ou em legislação especial): da data em que a vítima <b>completar <span class="num">18 anos</span></b>, <b class="o">salvo se a esse tempo já houver sido proposta a ação penal</b>.</li>
 </ul>
 </div>
+<table class="qd">
+  <tr><th>Situação</th><th style="width:250px">A prescrição começa a correr</th></tr>
+  <tr><td>Crime consumado (regra)</td><td class="c">dia da consumação</td></tr>
+  <tr><td>Tentativa</td><td class="c">dia em que cessou a atividade</td></tr>
+  <tr><td>Crime permanente</td><td class="c">dia em que cessou a permanência</td></tr>
+  <tr><td>Bigamia · falsificação/alteração de registro civil</td><td class="c">data em que o fato se tornou conhecido</td></tr>
+  <tr><td>Dignidade sexual ou violência contra criança/adolescente</td><td class="c">vítima completa 18 anos*</td></tr>
+</table>
+<p style="font-size:8.6pt;color:#6b7280;margin:0 0 4px">* salvo se a ação penal já tiver sido proposta.</p>
 <div class="box exc"><b class="lbl">Exceção — inc. V</b>
 Se a ação penal <b>já tiver sido proposta</b> antes de a vítima completar 18 anos, não se espera a maioridade para iniciar a contagem.
 </div>
@@ -243,6 +258,11 @@ A prescrição da pena de multa ocorrerá:
   <li><span class="id">I</span> Em <span class="num">2 anos</span>, quando a multa for a <b>única</b> cominada ou aplicada.</li>
   <li><span class="id">II</span> No <b>mesmo prazo da pena privativa de liberdade</b>, quando a multa for <b>alternativa ou cumulativamente cominada</b> ou <b>cumulativamente aplicada</b>.</li>
 </ul>
+<table class="qd">
+  <tr><th>Pena de multa</th><th style="width:200px">Prescreve em</th></tr>
+  <tr><td>Única cominada ou aplicada</td><td class="c">2 anos</td></tr>
+  <tr><td>Alternativa ou cumulativamente cominada, ou cumulativamente aplicada</td><td class="c">mesmo prazo da prisão</td></tr>
+</table>
 <div class="vin"><b>Vínculo</b> Multa sozinha prescreve <b>abaixo do piso</b> da tabela do art. 109: <span class="num">2</span> &lt; 3 (menor prazo da prisão). Multa acompanhada de prisão “pega carona” no prazo da prisão.</div>
 <div class="box att"><b class="lbl">Atenção para a prova</b>
 • Multa <b>isolada</b> = <b>2 anos</b> (não 3, que é o prazo do art. 109, VI).<br>
